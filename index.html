@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josh — Portfolio</title>
+<meta name="description" content="Personal academic and project portfolio.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f7f8fa;
+    --text: #14151a;
+    --text-muted: #5b5f6b;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0c0f;
+      --bg-alt: #131419;
+      --text: #f2f3f5;
+      --text-muted: #9aa0ac;
+      --border: #23252b;
+      --accent: #5b9dff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+  header.site {
+    padding: 5rem 0 3rem;
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+  }
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+  }
+  .placeholder { border-bottom: 2px dashed var(--accent); }
+  .lede {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 0 1.5rem;
+  }
+  .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  .links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 3rem 0; border-top: 1px solid var(--border); }
+  section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: var(--bg-alt);
+  }
+  .card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+  .card p { margin: 0 0 1rem; color: var(--text-muted); font-size: 0.95rem; }
+  .card .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.2rem 0.6rem;
+  }
+  .card a.card-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .card a.card-link:hover { text-decoration: underline; }
+
+  .note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+  }
+
+  footer {
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site">
+    <p class="eyebrow">Portfolio</p>
+    <h1><span class="placeholder">[Your Name]</span></h1>
+    <p class="lede"><span class="placeholder">One or two lines about your program, institution, and what you work on.</span> Replace this with a short intro — e.g. "CS undergrad / grad student working on [area]."</p>
+    <div class="links">
+      <a href="https://github.com/joshrfr" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="#" id="resume-link">Resume / CV</a>
+      <a href="#" id="linkedin-link">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>ChoppingBlock</h3>
+        <div class="tags">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">Capstone</span>
+        </div>
+        <p>Spring 2026 capstone project with team "404-Found": a health-equity mobile application built in Unity that helps kids learn healthy eating through play.</p>
+        <a class="card-link" href="https://joshrfr.github.io/ChoppingBlock/" target="_blank" rel="noopener">Live demo →</a>
+        &nbsp;·&nbsp;
+        <a class="card-link" href="https://github.com/joshrfr/ChoppingBlock" target="_blank" rel="noopener">Source →</a>
+      </div>
+
+      <div class="card">
+        <h3>[Add another project]</h3>
+        <div class="tags">
+          <span class="tag">Tag</span>
+        </div>
+        <p>Short description of what it is, what you built, and what you used.</p>
+        <a class="card-link" href="#">Link →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p class="note">Placeholder — add papers, preprints, or research projects here once they're ready to share publicly. Nothing is listed yet.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p><span class="placeholder">Longer bio goes here</span> — background, interests, what you're currently focused on, and what kind of opportunities or collaborations you're looking for.</p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> <span class="placeholder">Your Name</span>. Built with plain HTML — <a href="https://github.com/joshrfr/joshrfr.github.io" style="color:inherit">source</a>.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
